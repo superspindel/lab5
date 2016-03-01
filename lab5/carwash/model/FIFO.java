@@ -1,7 +1,8 @@
+package lab5.carwash.model;
 import java.util.ArrayList;
 import java.util.NoSuchElementException;
 
-public class FIFO implements Queue {
+public class FIFO {
 
 	ArrayList<Object> qList = new ArrayList<Object>(); //Skapar en arraylist
 	int storlek = 0;	// Denna variabel används i maxSize
@@ -23,8 +24,7 @@ public class FIFO implements Queue {
 		if (isEmpty() == true)
 			throw new NoSuchElementException();
 		else {
-			Object returneras = qList.get(0);
-			return returneras;
+			return qList.get(0);
 		}
 	}
 
@@ -39,6 +39,5 @@ public class FIFO implements Queue {
 
 	public void add(Object item) { //Lägger till ett element i listan
 		qList.add(item);
-		maxSize();
 	}
 }
