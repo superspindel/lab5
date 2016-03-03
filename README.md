@@ -47,7 +47,7 @@ RandomStreams
 
 carArrives event()
 {
-
+<i>
   skapa en bil från fabriken
   
   kolla om det finns ledig tvätt
@@ -66,5 +66,5 @@ carArrives event()
   
   om den blir rejected så uppdatera den variabeln
   
-  uppdatera last event tiden
+  uppdatera last event tiden</i>
 }
