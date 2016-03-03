@@ -11,6 +11,10 @@ carwashState
 
 <b>-Viktor</b>
 
+<strike>EventQueue</strike>
+
+<strike>Sorted Sequence</strike>
+
 <b>-Oskar</b>
 
 
@@ -22,10 +26,6 @@ Simulator
 SimView
 
 carwashView
-
-EventQueue
-
-Sorted Sequence
 
 Event 
 
