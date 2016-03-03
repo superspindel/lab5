@@ -10,6 +10,7 @@ CarFactory
 
 Car 
 
+carLeaves event 
 
 <b>-Viktor</b>
 
@@ -33,7 +34,7 @@ Event
 
 Stop event 
 
-carLeaves event 
+
 
 carArrives event 
 
