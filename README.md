@@ -2,11 +2,14 @@
 
 -Linus
 
+carwashState 
+
+FIFO carqueue
+
+
+
+
 -Viktor
-
-EventQueue
-
-Sorted Sequence
 
 -Oskar
 
@@ -20,6 +23,9 @@ SimView
 
 carwashView
 
+EventQueue
+
+Sorted Sequence
 
 Event 
 
@@ -30,10 +36,6 @@ carLeaves event
 carArrives event 
 
 SimState 
-
-carwashState 
-
-FIFO carqueue
 
 CarFactory 
 
