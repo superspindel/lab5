@@ -1,7 +1,7 @@
 # lab5
 
-#Linus
+-Linus
 
-#Viktor
+-Viktor
 
-#Oskar
+-Oskar
