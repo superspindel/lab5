@@ -4,6 +4,10 @@
 
 -Viktor
 
+EventQueue
+
+Sorted Sequence
+
 -Oskar
 
 
@@ -16,7 +20,7 @@ SimView
 
 carwashView
 
-EventQueue
+EventQueue    
 
 Sorted Sequence
 
