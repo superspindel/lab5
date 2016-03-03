@@ -1,6 +1,6 @@
 # lab5
 
--Linus
+<b>-Linus</b>
 
 carwashState 
 
@@ -9,9 +9,9 @@ carwashState
 
 
 
--Viktor
+<b>-Viktor</b>
 
--Oskar
+<b>-Oskar</b>
 
 
 
