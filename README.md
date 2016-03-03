@@ -4,16 +4,12 @@
 
 carwashState 
 
-FIFO carqueue
+<strike>FIFO carqueue</strike>
 
 
 
 
 -Viktor
-
-EventQueue --
-
-Sorted Sequence --
 
 -Oskar
 
@@ -26,6 +22,10 @@ Simulator
 SimView
 
 carwashView
+
+EventQueue
+
+Sorted Sequence
 
 Event 
 
