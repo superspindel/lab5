@@ -11,6 +11,10 @@ FIFO carqueue
 
 -Viktor
 
+EventQueue --
+
+Sorted Sequence --
+
 -Oskar
 
 
@@ -22,10 +26,6 @@ Simulator
 SimView
 
 carwashView
-
-EventQueue
-
-Sorted Sequence
 
 Event 
 
