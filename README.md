@@ -20,9 +20,6 @@ SimView
 
 carwashView
 
-EventQueue    
-
-Sorted Sequence
 
 Event 
 
