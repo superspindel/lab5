@@ -6,7 +6,9 @@ carwashState
 
 <strike>FIFO carqueue</strike>
 
+CarFactory 
 
+Car 
 
 
 <b>-Viktor</b>
@@ -37,9 +39,6 @@ carArrives event
 
 SimState 
 
-CarFactory 
-
-Car 
 
 RandomStreams 
 
