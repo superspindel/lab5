@@ -47,6 +47,7 @@ RandomStreams
 
 carArrives event()
 {
+
   skapa en bil från fabriken
   
   kolla om det finns ledig tvätt
