@@ -8,15 +8,14 @@ public class EventQueue {
 	public static void main(String[] args) {
 		
 	}
-	
 	public void add(Event event)
 	{
-		this.Queue.add((Object)event, event.getTime());
+		this.Queue.add(event, event.getTime());
 	}
 	
 	public Event getFirst()
 	{
-		return (Event)this.Queue.getFirst();
+		return this.Queue.getFirst();
 	}
 	
 	public void deleteFirst(){

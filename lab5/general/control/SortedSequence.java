@@ -8,11 +8,11 @@ public class SortedSequence {
 	private class Node 
 	{
 		private Node next;
-		private Object cargo;
+		private Event cargo;
 		private double ranking;
-		public Node(Object object, double ranking) {
+		public Node(Event event, double ranking) {
 			this.next = null;
-			this.cargo = object;
+			this.cargo = event;
 			this.ranking = ranking;
 		}
 	}
@@ -20,14 +20,14 @@ public class SortedSequence {
 		this.startnode = new Node(null, 0);
 	}
 	
-	public Object getFirst()
+	public Event getFirst()
 	{
 		return startnode.next.cargo;
 	}
-	public void add(Object object, double ranking)
+	public void add(Event event, double ranking)
 	{
 		boolean added = false;
-		Node AddNode = new Node(object, ranking);
+		Node AddNode = new Node(event, ranking);
 		if(this.isEmpty())
 		{
 			this.startnode.next = AddNode;
