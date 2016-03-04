@@ -6,9 +6,9 @@ carwashState
 
 <strike>FIFO carqueue</strike>
 
-CarFactory 
+CarFactory - Skapar bilobjekt med ett innehållande id.
 
-Car 
+Car - Bilobjekt som innehåller bilens id.
 
 carLeaves event 
 
