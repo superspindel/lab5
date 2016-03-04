@@ -33,7 +33,16 @@ public class carLeavesEvent {
 	}
 
 	private void washCar() {
-
+		if(den ska vara långsam && (slowCheck == true)){
+			myCarwashState.numFreeSlow--;
+			//Ändra state
+			return;
+		} 
+		if(den ska vara snabb && (fasCheck == true)){
+			myCarwashState.numFreeFast--;
+			//Ändra state
+			return;
+		}
 	}
 
 	private void createEventForWash() {
