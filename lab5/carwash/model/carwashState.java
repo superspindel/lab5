@@ -6,6 +6,7 @@ import lab5.carwash.*;
 
 public class carwashState extends SimState {
 
+	public CarFactory carFactory;
 	private int numFastMachines;
 	private int numSlowMachines;
 	private int numFreeFast;
@@ -23,6 +24,7 @@ public class carwashState extends SimState {
 		this.numSlowMachines = numSlow;
 		this.seed = seed;
 		this.carQueue = new FIFO();
+		this.carFactory = new CarFactory();
 	}
 	public void getCarFromQueue(){
 		
