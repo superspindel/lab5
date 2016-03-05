@@ -56,4 +56,7 @@ public class carLeavesEvent {
 			//Sätt bilen i FIFO
 		}
 	}
+	private void updateStates(){
+		
+	}
 }
