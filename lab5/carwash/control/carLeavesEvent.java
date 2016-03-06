@@ -39,7 +39,7 @@ public class carLeavesEvent {
 			//Ändra state
 			return;
 		} 
-		if((fasCheck == true)){
+		if((fastCheck == true)){
 			myCarwashState.numFreeFast--;
 			//Ändra state
 			return;
