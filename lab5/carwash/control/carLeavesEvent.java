@@ -53,7 +53,7 @@ public class carLeavesEvent {
 	private void queueCar(){
 		checkWashers();
 		if(slowCheck == false && fastCheck == false){
-			//Sätt bilen i FIFO
+			FIFO.add(myCar);
 		}
 	}
 	private void updateStates(){
