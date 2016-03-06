@@ -27,7 +27,7 @@ public class carwashState extends SimState {
 		this.carFactory = new CarFactory();
 	}
 	public void getCarFromQueue(){
-		
+		FIFO.getFirst();
 	}
 	public void putCarInQueue(Car bil){		
 		this.carQueue.add(bil);			//Här skickar vi in ett bilobjekt.
