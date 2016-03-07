@@ -38,9 +38,6 @@ public class carwashState extends SimState {
 	public int sizeOfQueue(){
 		return this.carQueue.size();
 	}
-	public void washCar(){		//Här skickar vi in ett bilobjekt.
-		
-	}
 	public void updateQueueTime(Event lastEvent){ //Osäker på hur vi ska göra här.
 										
 	}
