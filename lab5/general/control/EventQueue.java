@@ -25,4 +25,12 @@ public class EventQueue {
 	public boolean isEmpty(){
 		return this.Queue.isEmpty();
 	}
+	
+	public void removeAll()
+	{
+		while(!(this.Queue.isEmpty()))
+		{
+			this.Queue.deleteFirst();
+		}
+	}
 }

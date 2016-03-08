@@ -1,5 +1,7 @@
 package lab5.general.model;
 
-public class SimState {
+import java.util.Observable;
+
+public class SimState extends Observable{
 	
 }
