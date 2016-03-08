@@ -10,4 +10,9 @@ public class extends Observable{
 	boolean isActive(){
 		return active;
 	}
+	private void update(){
+		setChanged();
+		notifyObservers();
+	}
+	
 }
