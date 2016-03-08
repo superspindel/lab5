@@ -1,14 +1,10 @@
 package lab5.carwash.model;
-import lab5.general.*;
 import lab5.general.control.Event;
 import lab5.general.model.SimState;
-import lab5.carwash.*;
 
 public class carwashState extends SimState {
-
 	CarFactory carFactory;
-	private int numFastMachines;
-	private int numSlowMachines;
+
 	int numFreeFast;
 	int numFreeSlow;
 	
@@ -25,8 +21,6 @@ public class carwashState extends SimState {
 	int rejectedCars; 
 	
 	public carwashState(int numFast, int numSlow, long seed, int maxQueueSize){
-		this.numFastMachines = numFast;
-		this.numSlowMachines = numSlow;
 		this.numFreeFast = numFast;
 		this.numFreeSlow = numSlow;
 		this.carFactory = new CarFactory();
