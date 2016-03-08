@@ -6,31 +6,40 @@ import lab5.carwash.*;
 
 public class carwashState extends SimState {
 
-	public CarFactory carFactory;
+	CarFactory carFactory;
 	private int numFastMachines;
 	private int numSlowMachines;
-	private int numFreeFast;
-	private int numFreeSlow;
-	private FIFO carQueue;
-	private float lastEvent;
-	private float queueTime;
-	private float idleMachineTime;
-	private int rejectedCars; //Ska vi ha long eller int? Tänker att en int bör räcka men det beror ju på hur stort antal som ska kunna rejectas.
-	private RandomStreams RandomStream; //Ska vi ha ett objekt av RandomStreams här?
-	private int seed;
+	int numFreeFast;
+	int numFreeSlow;
 	
-	public carwashState(int numFast, int numSlow, int seed){
+	FIFO carQueue;
+	private int maxQueueSize;
+	
+	public Event CurrentEvent;
+	float lastEvent;
+	
+	RandomStreams ranStream;
+	
+	float queueTime;
+	float idleMachineTime;
+	int rejectedCars; 
+	
+	public carwashState(int numFast, int numSlow, long seed, int maxQueueSize){
 		this.numFastMachines = numFast;
 		this.numSlowMachines = numSlow;
-		this.seed = seed;
-		this.carQueue = new FIFO();
+		this.numFreeFast = numFast;
+		this.numFreeSlow = numSlow;
 		this.carFactory = new CarFactory();
+		initializeQueue(this, maxQueueSize);
+		initializeRandom(this, seed);
 	}
-	public void getCarFromQueue(){
-		carQueue.getFirst();
+	public Car getCarFromQueue(){
+		Car returnCar = (Car)this.carQueue.getFirst();
+		this.carQueue.deleteFirst();
+		return returnCar;
 	}
 	public void putCarInQueue(Car bil){		
-		this.carQueue.add(bil);			//Här skickar vi in ett bilobjekt.
+		this.carQueue.add(bil);
 	}
 	public boolean isQueueEmpty(){
 		return this.carQueue.isEmpty();
@@ -38,8 +47,18 @@ public class carwashState extends SimState {
 	public int sizeOfQueue(){
 		return this.carQueue.size();
 	}
-	public void updateQueueTime(Event lastEvent){ //Osäker på hur vi ska göra här.
-										
+	public boolean queueIsFull()
+	{
+		return this.sizeOfQueue() == this.maxQueueSize;
+	}
+	private void initializeQueue(carwashState self, int maxQueueSize)
+	{
+		self.carQueue = new FIFO();
+		self.maxQueueSize = maxQueueSize;
+	}
+	private void initializeRandom(carwashState self, long seed)
+	{
+		self.ranStream = new RandomStreams(seed, 3.5, 6.7, 2.8, 4.6, 2);
 	}
 }
 
