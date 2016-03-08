@@ -10,7 +10,7 @@
 
 <strike>Car</strike> - Bilobjekt som innehåller bilens id.
 
-carLeaves event -<i>Verkar vara klar?</i> 
+<strike>carLeaves event</strike> -<i>Verkar vara klar?</i> 
 
 <b>-Viktor</b>
 
