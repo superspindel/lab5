@@ -2,7 +2,7 @@ package lab5.carwash.model;
 import lab5.general.control.Event;
 import lab5.general.model.SimState;
 
-public class carwashState extends SimState extends observable {
+public class carwashState extends SimState implements observer {
 	CarFactory carFactory;
 
 	int numFreeFast;
