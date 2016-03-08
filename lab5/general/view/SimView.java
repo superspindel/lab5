@@ -25,4 +25,5 @@ public class SimView implements Observer {
 	{
 		
 	}
+	addObserver(this);
 }
