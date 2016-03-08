@@ -18,8 +18,13 @@ public class carLeavesEvent extends Event{
 		this.washerUsed = washerUsed;
 		
 	}
+	public int getCarId()
+	{
+		return this.thisCar.getId();
+	}
 	public void execute()
 	{
+		this.myCarwashState.CurrentEvent = this;
 		updateStats();
 		if(!(this.myCarwashState.isQueueEmpty()))
 		{
@@ -32,15 +37,23 @@ public class carLeavesEvent extends Event{
 				createSlowWashEvent(this.myCarwashState.getCarFromQueue());
 			}
 		}
+		if(this.washerUsed == 1)
+		{
+			this.myCarwashState.numFreeFast++;
+		}
+		else if(this.washerUsed == 2)
+		{
+			this.myCarwashState.numFreeSlow++;
+		}
 	}
 	private void createFastWashEvent(Car myCar)
 	{
-		carLeavesEvent thisCarLeaves = new carLeavesEvent(this.myCarwashState, this.myQueue, myCar, this.TimeForEvent+this.myCarwashState.fastWashTime);
+		carLeavesEvent thisCarLeaves = new carLeavesEvent(this.myCarwashState, this.myQueue, this.TimeForEvent+this.myCarwashState.ranStream.fastWashTime.next(), myCar, 1);
 		this.myQueue.add(thisCarLeaves);
 	}
 	private void createSlowWashEvent(Car myCar)
 	{
-		carLeavesEvent thisCarLeaves = new carLeavesEvent(this.myCarwashState, this.myQueue, myCar, this.TimeForEvent+this.myCarwashState.slowWashTime);
+		carLeavesEvent thisCarLeaves = new carLeavesEvent(this.myCarwashState, this.myQueue, this.TimeForEvent+this.myCarwashState.ranStream.slowWashTime.next(), myCar, 2);
 		this.myQueue.add(thisCarLeaves);
 	}
 	
