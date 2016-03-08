@@ -2,7 +2,7 @@ package lab5.carwash.model;
 import lab5.general.control.Event;
 import lab5.general.model.SimState;
 
-public class carwashState extends SimState {
+public class carwashState extends SimState extends observable {
 	CarFactory carFactory;
 
 	int numFreeFast;
@@ -54,5 +54,6 @@ public class carwashState extends SimState {
 	{
 		self.ranStream = new RandomStreams(seed, 3.5, 6.7, 2.8, 4.6, 2);
 	}
+	addObserver(this);
+	
 }
-
