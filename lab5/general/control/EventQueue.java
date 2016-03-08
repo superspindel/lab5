@@ -1,6 +1,6 @@
 package lab5.general.control;
 
-public class EventQueue {
+public class EventQueue extends observable {
 	private SortedSequence Queue;
 	public EventQueue(){
 		this.Queue = new SortedSequence();
@@ -26,11 +26,15 @@ public class EventQueue {
 		return this.Queue.isEmpty();
 	}
 	
-	public void removeAll()
-	{
+	public void removeAll(){
 		while(!(this.Queue.isEmpty()))
 		{
 			this.Queue.deleteFirst();
 		}
 	}
+	public void update(){
+		setChanged();
+		notifyObservers();
+	}
+	
 }
