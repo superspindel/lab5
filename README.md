@@ -36,7 +36,7 @@ Stop event
 
 
 
-carArrives event -<i>Verkar vara klar?</i>
+<strike>carArrives event</strike> -<i>Verkar vara klar?</i>
 
 SimState 
 
