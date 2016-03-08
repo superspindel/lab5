@@ -10,7 +10,7 @@ carwashState
 
 <strike>Car</strike> - Bilobjekt som innehåller bilens id.
 
-carLeaves event 
+carLeaves event <i>Verkar vara klar?</i> 
 
 <b>-Viktor</b>
 
@@ -36,7 +36,7 @@ Stop event
 
 
 
-carArrives event 
+carArrives event <i>Verkar vara klar?</i>
 
 SimState 
 
