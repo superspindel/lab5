@@ -16,6 +16,7 @@ public class carArrivesEvent extends Event{
 	}
 	public void execute()
 	{
+		this.myCarwashState.CurrentEvent = this;
 		updateStats();
 		Car myCar = createCar();
 		if(freeWashers())
@@ -59,12 +60,12 @@ public class carArrivesEvent extends Event{
 	}
 	private void createFastWashEvent(Car myCar)
 	{
-		carLeavesEvent thisCarLeaves = new carLeavesEvent(this.myCarwashState, this.myQueue, myCar, this.TimeForEvent+this.myCarwashState.fastWashTime);
+		carLeavesEvent thisCarLeaves = new carLeavesEvent(this.myCarwashState, this.myQueue, this.TimeForEvent+this.myCarwashState.ranStream.fastWashTime.next(), myCar,  1);
 		this.myQueue.add(thisCarLeaves);
 	}
 	private void createSlowWashEvent(Car myCar)
 	{
-		carLeavesEvent thisCarLeaves = new carLeavesEvent(this.myCarwashState, this.myQueue, myCar, this.TimeForEvent+this.myCarwashState.slowWashTime);
+		carLeavesEvent thisCarLeaves = new carLeavesEvent(this.myCarwashState, this.myQueue, this.TimeForEvent+this.myCarwashState.ranStream.slowWashTime.next(),myCar, 2);
 		this.myQueue.add(thisCarLeaves);
 	}
 	private void queueCar(Car myCar)
@@ -91,6 +92,7 @@ public class carArrivesEvent extends Event{
 	
 	private void createNextArrivesEvent()
 	{
-		carArrivesEvent nextCarArrives = new carArrivesEvent(this.myCarwashState, this.myQueue, this.TimeForEvent+this.myCarwashState.nextArrivalTime);
+		carArrivesEvent nextCarArrives = new carArrivesEvent(this.myCarwashState, this.myQueue, this.TimeForEvent+this.myCarwashState.ranStream.nextArrivalTime.next());
+		this.myQueue.add(nextCarArrives);
 	}
 }
