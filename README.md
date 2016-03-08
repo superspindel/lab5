@@ -2,7 +2,7 @@
 
 <b>-Linus</b>
 
-carwashState 
+<strike>carwashState</strike> 
 
 <strike>FIFO carqueue</strike>
 
