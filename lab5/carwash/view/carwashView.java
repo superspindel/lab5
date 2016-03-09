@@ -22,5 +22,8 @@ public void setMessage(String newMessage){
 		System.out.println("----------------------------------------");
 	}
 	public void afterPrint(){
-	  
+		System.out.println("----------------------------------------");
+		System.out.println("Total idle machine time: "+myState.idleMachineTime);
+		System.out.println("Total Queueing time: "+myState.queueTime);
+		System.out.println("Mean queueing time: "+((CarFactory.numCar-myState.rejectedCars)/myState.queueTime));
 	}
