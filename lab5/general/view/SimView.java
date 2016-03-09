@@ -11,6 +11,7 @@ public class SimView implements Observer {
 	public SimView(SimState theState)
 	{
 		this.myState = theState;
+		this.myState.addObserver(this);
 	}
 	
 	public void update(Observable obs, Object obj)
@@ -25,5 +26,4 @@ public class SimView implements Observer {
 	{
 		
 	}
-	addObserver(this);
 }
