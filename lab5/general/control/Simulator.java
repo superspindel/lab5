@@ -1,15 +1,18 @@
 package lab5.general.control;
 
 public class Simulator {
-		boolean flag = true;
-		
+		private EventQueue q1;
+		private SimState state1;
+		private SimView view1;
 		public run(){
-			while(flag == true && EventQueue.isEmpty() == false){
-				EventQueue.getFirst().execute();
+			while(state1.isActive == true && q.isEmpty() == false){
+				q.getFirst().execute();
 			}
 		}
-		public Simulator(){
-			
+		public Simulator(SimState state, EventQueue q, SimView view){
+			q1 = q;
+			state1 = state;
+			view1 = view;
 		}
 }
 
