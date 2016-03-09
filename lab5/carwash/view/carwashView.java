@@ -20,6 +20,8 @@ public void setMessage(String newMessage){
 		System.out.println("Seed: "+myState.seed);
 		System.out.println("Max Queue size: "+myState.maxQueueSize);
 		System.out.println("----------------------------------------");
+		String UpperFormattedString = String.format("%1$-5s %2$7s %3$7s %4$7s %5$-10s %6$10s %7$15s %8$15s %9$15s", "Time", "Fast", "Slow", "Id", "Event", "IdleTime", "QueueTime", "QueueSize", "Rejected");
+		System.out.println(UpperFormattedString);
 	}
 	public void afterPrint(){
 		System.out.println("----------------------------------------");
